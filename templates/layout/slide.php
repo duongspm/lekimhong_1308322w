@@ -1,9 +1,6 @@
 <div class="slider">
-    <div class="img-item01">
-        <img src="assets/images/img-item01.png" alt="">
-    </div>
     <?php if(count($slider)) { ?>
-    <div class="slideshow">
+    <div class="Psty">
         <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:0" data-sm-items="1:0" data-md-items="1:0"
             data-lg-items="1:0" data-xlg-items="1:0" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0"
             data-mousedrag="0" data-touchdrag="0" data-smartspeed="800" data-autoplayspeed="800"
@@ -15,7 +12,7 @@
             <?php foreach($slider as $v) { ?>
             <div class="slideshow-item" owl-item-animation>
                 <a class="slideshow-image" href="<?=$v['link']?>" target="_blank" title="<?=$v['name'.$lang]?>">
-                    <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '1366x670x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+                    <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '1366x630x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
                 </a>
             </div>
             <?php } ?>
@@ -23,10 +20,4 @@
         <div class="control-slideshow control-owl transition"></div>
     </div>
     <?php } ?>
-    <div class="img-item02">
-        <img src="assets/images/img-item02.png" alt="">
-    </div>
-    <div class="img-item03">
-        <img src="assets/images/img-item03.png" alt="">
-    </div>
 </div>

@@ -5,7 +5,7 @@
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 	/* Cấu hình coder */
-	define('NN_CONTRACT', 'MSHD');
+	define('NN_CONTRACT', '1308322w');
 	define('NN_AUTHOR', 'tranvduong.nina@gmail.com');
 
 	/* Cấu hình chung */

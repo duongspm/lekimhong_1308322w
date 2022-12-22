@@ -6,10 +6,10 @@
     $splist = $cache->get("select name$lang, slugvi, slugen,photo, id from #_product_list where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
     $newsnb = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'), 'result', 7200);
     $productnb = $cache->get("select *, id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);
-    $video = $cache->get("select name$lang, desc$lang,link_video,photo, id from #_photo where type = ? and find_in_set('hienthi',status)", array('video'), 'result', 7200);
+    $videoclip = $cache->get("select name$lang, desc$lang,link_video,photo, id from #_photo where type = ? and find_in_set('hienthi',status)", array('videoclip'), 'result', 7200);
     $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
-    $about = $cache->get("select name$lang,desc$lang, content$lang from #_static where type = ? limit 0,1", array('gioi-thieu'), 'fetch', 7200);
-    $socialabout = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('social-about'), 'result', 7200);
+    $about = $cache->get("select name$lang,desc$lang,photo, content$lang from #_static where type = ? limit 0,1", array('gioi-thieu'), 'fetch', 7200);
+    $socialabout = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('social'), 'result', 7200);
     $dkimg = $cache->get("select name$lang, photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('register-img'), 'result', 7200);
 
     //Need
