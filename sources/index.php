@@ -10,7 +10,7 @@
     $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
     $about = $cache->get("select name$lang,desc$lang,photo, content$lang from #_static where type = ? limit 0,1", array('gioi-thieu'), 'fetch', 7200);
     $socialabout = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('social'), 'result', 7200);
-    $dkimg = $cache->get("select name$lang, photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('register-img'), 'result', 7200);
+    $dkimg = $cache->get("select name$lang, photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('image-register'), 'result', 7200);
 
     //Need
     /* SEO */
