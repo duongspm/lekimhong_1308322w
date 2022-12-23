@@ -8,6 +8,8 @@ $config['product'][$nametype]['cat'] = true;
 $config['product'][$nametype]['view'] = true;
 $config['product'][$nametype]['copy'] = true;
 $config['product'][$nametype]['regular_price'] = true;
+$config['product'][$nametype]['sale_price'] = true;
+$config['product'][$nametype]['discount'] = true;
 $config['product'][$nametype]['copy_image'] = true;
 $config['product'][$nametype]['slug'] = true;
 $config['product'][$nametype]['check'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");

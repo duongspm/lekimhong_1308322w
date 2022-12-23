@@ -56,10 +56,10 @@ $pagingItems = $pagingAjax->getAllPageLinks($countItems, $pageLink, $eShow);
                 <?php if($v['discount']) { ?>
                 <span class="price-new"><?=$func->formatMoney($v['sale_price'])?></span>
                 <span class="price-old"><?=$func->formatMoney($v['regular_price'])?></span>
-
+                <span class="price-per"><?='-'.$v['discount'].'%'?></span>
                 <?php } else { ?>
                 <span
-                    class="price-new"><?=($v['regular_price']) ? $func->formatMoney($v['regular_price']) : "Liên hệ"?></span>
+                    class="price-new"><?=($v['regular_price']) ? $func->formatMoney($v['regular_price']) : "Liên hệ: " . $func->formatPhone($optsetting['hotline'])?></span>
                 <?php } ?>
             </p>
         </a>
