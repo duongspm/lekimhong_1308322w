@@ -42,8 +42,8 @@
                     <div class="fb-page"
                     data-href="' . $optsetting['fanpage'] . '"
                     data-tabs="timeline"
-                    data-width="500"
-                    data-height="420"
+                    data-width="590"
+                    data-height="433"
                     data-small-header="true"
                     data-adapt-container-width="true"
                     data-hide-cover="false" data-show-facepile="true">

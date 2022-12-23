@@ -158,48 +158,41 @@
 
 <div class="title-main"><span><?= sanphamcungloai ?></span></div>
 <div class="content-main w-clear">
-    <div class="grid_pro">
-        <?php if (!empty($product)) {
+
+    <?php if (!empty($product)) {
             foreach ($product as $k => $v) { ?>
-        <div class="item_pro">
-            <div class="flip_font">
-                <div class="img_pro">
-                    <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
-                        <?=$func->getImage(['class' => '', 'sizes' => '220x320x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
-                    </a>
-                </div>
-                <h3 class="pro-name">
-                    <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a>
-                </h3>
-            </div>
-            <div class="flip_pro">
-                <div class="info_flip">
-                    <h3 class="pro-name">
-                        <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a>
-                    </h3>
-                    <p class="price-product">
-                        <?php if($v['discount']) { ?> <span class="price-new">
-                            <?=$func->formatMoney($v['sale_price'])?></span>
-                        <span class="price-old"><?=$func->formatMoney($v['regular_price'])?></span>
-                        <span class="price-per"><?='-'.$v['discount'].'%'?></span>
-                        <?php } else { ?>
-                        <span
-                            class="price-new"><?=($v['regular_price']) ? $func->formatMoney($v['regular_price']) : lienhe?></span>
-                        <?php } ?>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <?php }
-        } else { ?>
-        <div class="col-12">
-            <div class="alert alert-warning w-100" role="alert">
-                <strong><?= khongtimthayketqua ?></strong>
-            </div>
-        </div>
-        <?php } ?>
+    <div class="product">
+        <a class="box-product text-decoration-none" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>">
+            <p class="pic-product scale-img effect10">
+                <?=$func->getImage(['sizes' => '270x270x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+            </p>
+            <h3 class="name-product text-split"><?=$v['name'.$lang]?></h3>
+            <p class="price-product">
+                <span class="price-price">
+                    Giá:
+                </span>
+                <?php if($v['discount']) { ?>
+                <span class="price-new"><?=$func->formatMoney($v['sale_price'])?></span>
+                <span class="price-old"><?=$func->formatMoney($v['regular_price'])?></span>
+                <span class="price-per"><?='-'.$v['discount'].'%'?></span>
+                <?php } else { ?>
+                <span
+                    class="price-new"><?=($v['regular_price']) ? $func->formatMoney($v['regular_price']) : "Liên hệ: " . $func->formatPhone($optsetting['hotline'])?></span>
+                <?php } ?>
+            </p>
+        </a>
 
     </div>
+    <?php }
+        } else { ?>
+    <div class="col-12">
+        <div class="alert alert-warning w-100" role="alert">
+            <strong><?= khongtimthayketqua ?></strong>
+        </div>
+    </div>
+    <?php } ?>
+
+
 
     <div class="clear"></div>
     <div class="col-12">

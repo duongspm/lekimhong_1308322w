@@ -31,7 +31,7 @@
 
 
 <?php if($type == 'fanpage-facebook') { ?>
-<div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="500" data-height="173"
+<div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="600" data-height="473"
     data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
     <div class="fb-xfbml-parse-ignore">
         <blockquote cite="<?=$optsetting['fanpage']?>">

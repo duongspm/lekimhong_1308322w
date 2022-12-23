@@ -166,8 +166,8 @@
         </div>
         <div class="video-fb">
             <div class="video__fb--left">
-                <div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="595"
-                    data-height="482" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
+                <div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="590"
+                    data-height="433" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
                     data-show-facepile="true">
                     <div class="fb-xfbml-parse-ignore">
                         <blockquote cite="<?=$optsetting['fanpage']?>">
